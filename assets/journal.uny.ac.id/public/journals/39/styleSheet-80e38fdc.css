@@ -1,0 +1,55 @@
+/* JPIP — Penyeragaman blok INFORMATION (bawaan OJS) dan KEYWORDS
+   Warna mengikuti sidebar JPIP: #3D6C75 / #4D848F.
+   Tidak mengubah menu ABOUT THE JOURNAL, TOOLS, atau tombol template.
+*/
+
+/* INFORMATION: For Readers, For Authors, For Librarians */
+.pkp_structure_sidebar .pkp_block.block_information > .title,
+.pkp_structure_sidebar .block_information > .title,
+.pkp_structure_sidebar .block_information > h2,
+.pkp_structure_sidebar .block_information > h3 {
+  display: block !important;
+  padding: 9px 12px !important;
+  margin-bottom: 8px !important;
+  border: 0 !important;
+  border-bottom: 3px solid #4D848F !important;
+  border-radius: 5px 5px 0 0 !important;
+  background: #3D6C75 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* KEYWORDS: blok cloud kata kunci dari plugin */
+.pkp_structure_sidebar .pkp_block.block_keyword_cloud > .title,
+.pkp_structure_sidebar .pkp_block.block_keywordCloud > .title,
+.pkp_structure_sidebar .pkp_block.block_keywordCloudBlock > .title,
+.pkp_structure_sidebar .pkp_block[class*="keyword"] > .title,
+.pkp_structure_sidebar .pkp_block[class*="Keyword"] > .title,
+.pkp_structure_sidebar .pkp_block[class*="keyword"] > h2,
+.pkp_structure_sidebar .pkp_block[class*="keyword"] > h3,
+.pkp_structure_sidebar .pkp_block[class*="Keyword"] > h2,
+.pkp_structure_sidebar .pkp_block[class*="Keyword"] > h3 {
+  display: block !important;
+  padding: 9px 12px !important;
+  margin-bottom: 8px !important;
+  border: 0 !important;
+  border-bottom: 3px solid #4D848F !important;
+  border-radius: 5px 5px 0 0 !important;
+  background: #3D6C75 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* INFO: tautan tetap mudah dibaca dan selaras dengan JPIP */
+.pkp_structure_sidebar .block_information .content a {
+  color: #3D6C75 !important;
+}
+
+
+/* JPIP — Garis aksen footer (bukan seluruh latar belakang footer).
+   Target ini lazim di OJS; bila tema Synonime menggunakan elemen lain,
+   pemeriksaan elemen di browser diperlukan.
+*/
+.pkp_structure_footer_wrapper {
+  border-bottom: 18px solid #3D6C75 !important;
+}

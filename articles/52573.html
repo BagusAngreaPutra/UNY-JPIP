@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Implementation of forecasting methods to determine teaching and learning model policies during a pandemic in border areas
+							| Jurnal Penelitian Ilmu Pendidikan
+			</title>
+
+	
+<meta name="generator" content="Open Journal Systems 3.3.0.20">
+<meta name="gs_meta_revision" content="1.1"/>
+<meta name="citation_journal_title" content="Jurnal Penelitian Ilmu Pendidikan"/>
+<meta name="citation_journal_abbrev" content="JPIP"/>
+<meta name="citation_issn" content="2541-5492"/> 
+<meta name="citation_author" content="Irfan Wahyu Prananto"/>
+<meta name="citation_author_institution" content="(Scopus ID: 57220579532) Universitas Negeri Yogyakarta"/>
+<meta name="citation_author" content="Tubagus Pamungkas"/>
+<meta name="citation_author_institution" content="Universitas Riau Kepulauan"/>
+<meta name="citation_author" content="Riyan Hidayat"/>
+<meta name="citation_author_institution" content="Faculty of Educational Studies, Universiti Putra Malaysia, Malaysia"/>
+<meta name="citation_title" content="Implementation of forecasting methods to determine teaching and learning model policies during a pandemic in border areas"/>
+<meta name="citation_language" content="en"/>
+<meta name="citation_date" content="2023/03/21"/>
+<meta name="citation_volume" content="16"/>
+<meta name="citation_issue" content="1"/>
+<meta name="citation_firstpage" content="35"/>
+<meta name="citation_lastpage" content="46"/>
+<meta name="citation_doi" content="10.21831/jpipfip.v16i1.52573"/>
+<meta name="citation_abstract_html_url" content="https://journal.uny.ac.id/index.php/jpip/article/view/52573"/>
+<meta name="citation_keywords" xml:lang="en" content="forecasting methods"/>
+<meta name="citation_keywords" xml:lang="en" content="Covid-19"/>
+<meta name="citation_keywords" xml:lang="en" content="education policy"/>
+<meta name="citation_keywords" xml:lang="en" content="teaching and learning activities"/>
+<meta name="citation_pdf_url" content="../pdfs/52573-20202.pdf"/>
+<meta name="citation_reference" content="Aimran, A. N., &amp; Afthanorhan, A. (2014). A comparison between single exponential smoothing (SES), double exponential smoothing (DES), holt's (brown) and adaptive response rate exponential smoothing (ARRES) techniques in forecasting Malaysia population. Global Journal of Mathematical Analysis, 2(4), 276. https://doi.org/10.14419/gjma.v2i4.3253"/>
+<meta name="citation_reference" content="Armstrong, J. S. (2001). Evaluating forecasting methods. In Principles of Forecasting: A Handbook for Researchers and Practitioners. Kluwer. https://repository.upenn.edu/handle/20.500.14332/39302"/>
+<meta name="citation_reference" content="Baker, M. G., Peckham, T. K., &amp; Seixas, N. S. (2020). Estimating the burden of United States workers exposed to infection or disease: A key factor in containing risk of COVID-19 infection. PLOS ONE, 15(4), e0232452. https://doi.org/10.1371/journal.pone.0232452"/>
+<meta name="citation_reference" content="Batty, M. (1969). Monitoring an exponential smoothing forecasting system. Journal of the Operational Research Society, 20(3), 319–325. https://doi.org/10.1057/jors.1969.76"/>
+<meta name="citation_reference" content="Breslow, N. (1970). A generalized Kruskal-Wallis test for comparing K samples subject to unequal patterns of censorship. Biometrika, 57(3), 579–594. https://doi.org/10.1093/biomet/57.3.579"/>
+<meta name="citation_reference" content="Brown, B. M., &amp; Hettmansperger, T. P. (2002). Kruskal–Wallis, multiple comparisons and efron dice. Australian &amp; New Zealand Journal of Statistics, 44(4), 427–438. https://doi.org/10.1111/1467-842X.00244"/>
+<meta name="citation_reference" content="Brumback, B., &amp; Srinath, M. (1987). A Chi-square test for fault-detection in Kalman filters. IEEE Transactions on Automatic Control, 32(6), 552–554. https://doi.org/10.1109/TAC.1987.1104658"/>
+<meta name="citation_reference" content="Burdorf, A., Porru, F., &amp; Rugulies, R. (2020). The COVID-19 (Coronavirus) pandemic: Consequences for occupational health. Scandinavian Journal of Work, Environment &amp; Health, 46(3), 229–230. https://doi.org/10.5271/sjweh.3893"/>
+<meta name="citation_reference" content="Bwire, G. M. (2020). Coronavirus: Why men are more vulnerable to Covid-19 than women? SN Comprehensive Clinical Medicine, 2(7), 874–876. https://doi.org/10.1007/s42399-020-00341-w"/>
+<meta name="citation_reference" content="Chan, Y., &amp; Walmsley, R. P. (1997). Learning and understanding the Kruskal-Wallis one-way analysis-of-variance-by-ranks test for differences among three or more independent groups. Physical Therapy, 77(12), 1755–1761. https://doi.org/10.1093/ptj/77.12.1755"/>
+<meta name="citation_reference" content="Chatfield, C., Wheelwright, S. C., &amp; Makridakis, S. (1978). Forecasting methods for management. Journal of the Royal Statistical Society. Series A (General), 141(1), 113. https://doi.org/10.2307/2344788"/>
+<meta name="citation_reference" content="Chen, Y., Zheng, L., Song, J., Huang, L., &amp; Zheng, J. (2022). Revealing the impact of urban form on COVID-19 based on machine learning: Taking Macau as an example. Sustainability, 14(21), 14341. https://doi.org/10.3390/su142114341"/>
+<meta name="citation_reference" content="Chinazzi, M., Davis, J. T., Ajelli, M., Gioannini, C., Litvinova, M., Merler, S., Pastore y Piontti, A., Mu, K., Rossi, L., Sun, K., Viboud, C., Xiong, X., Yu, H., Halloran, M. E., Longini, I. M., &amp; Vespignani, A. (2020). The effect of travel restrictions on the spread of the 2019 novel coronavirus (COVID-19) outbreak. Science, 368(6489), 395–400. https://doi.org/10.1126/science.aba9757"/>
+<meta name="citation_reference" content="Cruz, A. T., &amp; Zeichner, S. L. (2020). COVID-19 in children: Initial characterization of the pediatric disease. Pediatrics, 145(6). https://doi.org/10.1542/peds.2020-0834"/>
+<meta name="citation_reference" content="Dalton, L. A., &amp; Dougherty, E. R. (2011). Bayesian minimum mean-square error estimation for classification error&quot;”Part I: Definition and the Bayesian MMSE error estimator for discrete classification. IEEE Transactions on Signal Processing, 59(1), 115–129. https://doi.org/10.1109/TSP.2010.2084572"/>
+<meta name="citation_reference" content="Dong, Y., Mo, X., Hu, Y., Qi, X., Jiang, F., Jiang, Z., &amp; Tong, S. (2020). Epidemiology of COVID-19 among children in China. Pediatrics, 145(6). https://doi.org/10.1542/peds.2020-0702"/>
+<meta name="citation_reference" content="Goh, E., &amp; Baum, T. (2021). Job perceptions of generation Z hotel employees towards working in Covid-19 quarantine hotels: The role of meaningful work. International Journal of Contemporary Hospitality Management, 33(5), 1688–1710. https://doi.org/10.1108/IJCHM-11-2020-1295"/>
+<meta name="citation_reference" content="Hamadani, J. D., Hasan, M. I., Baldi, A. J., Hossain, S. J., Shiraji, S., Bhuiyan, M. S. A., Mehrin, S. F., Fisher, J., Tofail, F., Tipu, S. M. M. U., Grantham-McGregor, S., Biggs, B.-A., Braat, S., &amp; Pasricha, S.-R. (2020). Immediate impact of stay-at-home orders to control COVID-19 transmission on socioeconomic conditions, food insecurity, mental health, and intimate partner violence in Bangladeshi women and their families: An interrupted time series. The Lancet Global Health, 8(11), e1380–e1389. https://doi.org/10.1016/S2214-109X(20)30366-1"/>
+<meta name="citation_reference" content="Hannan, E. J., &amp; Kavalieris, L. (1984). A method for autoregressive-moving average estimation. Biometrika, 71(2), 273–280. https://doi.org/10.1093/biomet/71.2.273"/>
+<meta name="citation_reference" content="Hansun, S. (2013). A new approach of moving average method in time series analysis. 2013 Conference on New Media Studies (CoNMedia), 1–4. https://doi.org/10.1109/CoNMedia.2013.6708545"/>
+<meta name="citation_reference" content="Hecke, T. Van. (2012). Power study of anova versus Kruskal-Wallis test. Journal of Statistics and Management Systems, 15(2–3), 241–247. https://doi.org/10.1080/09720510.2012.10701623"/>
+<meta name="citation_reference" content="Hidayat, A. A., Arief, Z., &amp; Happyanto, D. C. (2015). Mobile application with simple moving average filtering for monitoring finger muscles therapy of post-stroke people. 2015 International Electronics Symposium (IES), 1–6. https://doi.org/10.1109/ELECSYM.2015.7380803"/>
+<meta name="citation_reference" content="Huang, J., Li, C., &amp; Yu, J. (2012). Resource prediction based on double exponential smoothing in cloud computing. 2012 2nd International Conference on Consumer Electronics, Communications and Networks (CECNet), 2056–2060. https://doi.org/10.1109/CECNet.2012.6201461"/>
+<meta name="citation_reference" content="Jean Lee, S. K. (1992). Quantitative versus qualitative research methods &quot;” Two approaches to organisation studies. Asia Pacific Journal of Management, 9(1), 87–94. https://doi.org/10.1007/BF01732039"/>
+<meta name="citation_reference" content="Jin, J.-M., Bai, P., He, W., Wu, F., Liu, X.-F., Han, D.-M., Liu, S., &amp; Yang, J.-K. (2020). Gender differences in patients with COVID-19: Focus on severity and mortality. Frontiers in Public Health, 8. https://doi.org/10.3389/fpubh.2020.00152"/>
+<meta name="citation_reference" content="Kanetaki, Z., Stergiou, C., Bekas, G., Jacques, S., Troussas, C., Sgouropoulou, C., &amp; Ouahabi, A. (2022). Grade prediction modeling in hybrid learning environments for sustainable engineering education. Sustainability, 14(9), 5205. https://doi.org/10.3390/su14095205"/>
+<meta name="citation_reference" content="Kelvin, A. A., &amp; Halperin, S. (2020). COVID-19 in children: The link in the transmission chain. The Lancet Infectious Diseases, 20(6), 633–634. https://doi.org/10.1016/S1473-3099(20)30236-X"/>
+<meta name="citation_reference" content="King, W. C., Rubinstein, M., Reinhart, A., &amp; Mejia, R. (2021). COVID-19 vaccine hesitancy January-May 2021 among 18–64 year old US adults by employment and occupation. Preventive Medicine Reports, 24, 101569. https://doi.org/10.1016/j.pmedr.2021.101569"/>
+<meta name="citation_reference" content="Kopel, J., Perisetti, A., Roghani, A., Aziz, M., Gajendran, M., &amp; Goyal, H. (2020). Racial and gender-based differences in COVID-19. Frontiers in Public Health, 8. https://doi.org/10.3389/fpubh.2020.00418"/>
+<meta name="citation_reference" content="Kraemer, M. U. G., Yang, C.-H., Gutierrez, B., Wu, C.-H., Klein, B., Pigott, D. M., du Plessis, L., Faria, N. R., Li, R., Hanage, W. P., Brownstein, J. S., Layan, M., Vespignani, A., Tian, H., Dye, C., Pybus, O. G., &amp; Scarpino, S. V. (2020). The effect of human mobility and control measures on the COVID-19 epidemic in China. Science, 368(6490), 493–497. https://doi.org/10.1126/science.abb4218"/>
+<meta name="citation_reference" content="Lau, H., Khosrawipour, V., Kocbach, P., Mikolajczyk, A., Schubert, J., Bania, J., &amp; Khosrawipour, T. (2020). The positive impact of lockdown in Wuhan on containing the COVID-19 outbreak in China. Journal of Travel Medicine, 27(3). https://doi.org/10.1093/jtm/taaa037"/>
+<meta name="citation_reference" content="Lee, S., &amp; Fambro, D. B. (1999). Application of subset autoregressive integrated moving average model for short-term freeway traffic volume forecasting. Transportation Research Record: Journal of the Transportation Research Board, 1678(1), 179–188. https://doi.org/10.3141/1678-22"/>
+<meta name="citation_reference" content="Lekfuangfu, W. N., Piyapromdee, S., Porapakkarm, P., &amp; Wasi, N. (2020). On Covid-19: New implications of job task requirements and spouse's occupational sorting. SSRN Electronic Journal. https://doi.org/10.2139/ssrn.3583954"/>
+<meta name="citation_reference" content="Lewandowski, P. (2020). Occupational exposure to contagion and the spread of Covid-19 in Europe. SSRN Electronic Journal, IZA Discus. https://doi.org/10.2139/ssrn.3596694"/>
+<meta name="citation_reference" content="Murphy, A. H. (1988). Skill scores based on the mean square error and their relationships to the correlation coefficient. Monthly Weather Review, 116(12), 2417–2424. https://doi.org/10.1175/1520-0493(1988)116&lt;2417:SSBOTM&gt;2.0.CO;2"/>
+<meta name="citation_reference" content="Posfay-Barbe, K. M., Wagner, N., Gauthey, M., Moussaoui, D., Loevy, N., Diana, A., &amp; L'Huillier, A. G. (2020). COVID-19 in children and the dynamics of infection in families. Pediatrics, 146(2). https://doi.org/10.1542/peds.2020-1576"/>
+<meta name="citation_reference" content="Prem, K., Liu, Y., Russell, T. W., Kucharski, A. J., Eggo, R. M., Davies, N., Jit, M., Klepac, P., Flasche, S., Clifford, S., Pearson, C. A. B., Munday, J. D., Abbott, S., Gibbs, H., Rosello, A., Quilty, B. J., Jombart, T., Sun, F., Diamond, C., ... Hellewell, J. (2020). The effect of control strategies to reduce social mixing on outcomes of the COVID-19 epidemic in Wuhan, China: a modelling study. The Lancet Public Health, 5(5), e261–e270. https://doi.org/10.1016/S2468-2667(20)30073-6"/>
+<meta name="citation_reference" content="Rajmil, L. (2020). Role of children in the transmission of the COVID-19 pandemic: A rapid scoping review. BMJ Paediatrics Open, 4(1), e000722. https://doi.org/10.1136/bmjpo-2020-000722"/>
+<meta name="citation_reference" content="Satorra, A., &amp; Bentler, P. M. (2001). A scaled difference chi-square test statistic for moment structure analysis. Psychometrika, 66(4), 507–514. https://doi.org/10.1007/BF02296192"/>
+<meta name="citation_reference" content="Sim, M. R. (2020). The COVID-19 pandemic: Major risks to healthcare and other workers on the front line. Occupational and Environmental Medicine, 77(5), 281–282. https://doi.org/10.1136/oemed-2020-106567"/>
+<meta name="citation_reference" content="Singer, M. E., Taub, I. B., &amp; Kaelber, D. C. (2022). Risk of Myocarditis from COVID-19 infection in people under age 20: A population-based analysis. MedRxiv. https://doi.org/10.1101/2021.07.23.21260998"/>
+<meta name="citation_reference" content="Snyder, R. D., Koehler, A. B., &amp; Ord, J. K. (2002). Forecasting for inventory control with exponential smoothing. International Journal of Forecasting, 18(1), 5–18. https://doi.org/10.1016/S0169-2070(01)00109-1"/>
+<meta name="citation_reference" content="Syed, F. U., Baloch, M., &amp; Awan, M. H. (2021). Covid-19 and rural education, a perspective on global education system: AMSTAR tool as systematic literature review. IOSR Journal of Business and Management (IOSR-JBM, 23(8). https://doi.org/10.9790/487X-2308063048"/>
+<meta name="citation_reference" content="Thibaut, F., &amp; van Wijngaarden-Cremers, P. J. M. (2020). Women's mental health in the time of Covid-19 pandemic. Frontiers in Global Women's Health, 1. https://doi.org/10.3389/fgwh.2020.588372"/>
+<meta name="citation_reference" content="Wang, C. (2008). Quantitative analysis on the Bullwhip effect in a supply chain using double moving average and double exponential smoothing forecasts. 2008 International Symposiums on Information Processing, 114–118. https://doi.org/10.1109/ISIP.2008.32"/>
+<meta name="citation_reference" content="Weatherford, L. R., &amp; Kimes, S. E. (2003). A comparison of forecasting methods for hotel revenue management. International Journal of Forecasting, 19(3), 401–415. https://doi.org/10.1016/S0169-2070(02)00011-0"/>
+<meta name="citation_reference" content="Wenham, C., Smith, J., &amp; Morgan, R. (2020). COVID-19: The gendered impacts of the outbreak. The Lancet, 395(10227), 846–848. https://doi.org/10.1016/S0140-6736(20)30526-2"/>
+<meta name="citation_reference" content="Yilmaz, K. (2013). Comparison of quantitative and qualitative research traditions: Epistemological, theoretical, and methodological differences. European Journal of Education, 48(2), 311–325. https://doi.org/10.1111/ejed.12014"/>
+<meta name="citation_reference" content="Zigron, A., Dror, A. A., Morozov, N. G., Shani, T., Haj Khalil, T., Eisenbach, N., Rayan, D., Daoud, A., Kablan, F., Marei, H., Sela, E., &amp; Srouji, S. (2021). COVID-19 vaccine acceptance among dental professionals based on employment status during the Pandemic. Frontiers in Medicine, 8. https://doi.org/10.3389/fmed.2021.618403"/>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC.Creator.PersonalName" content="Irfan Wahyu Prananto"/>
+<meta name="DC.Creator.PersonalName" content="Tubagus Pamungkas"/>
+<meta name="DC.Creator.PersonalName" content="Riyan Hidayat"/>
+<meta name="DC.Date.created" scheme="ISO8601" content="2023-03-21"/>
+<meta name="DC.Date.dateSubmitted" scheme="ISO8601" content="2022-08-12"/>
+<meta name="DC.Date.issued" scheme="ISO8601" content="2023-03-21"/>
+<meta name="DC.Date.modified" scheme="ISO8601" content="2023-10-03"/>
+<meta name="DC.Description" xml:lang="en" content="Indonesia is an archipelagic country with more than seventeen thousand islands, both in the interior and border areas. The border area is directly or indirectly a barrier to other countries. The purpose of this study is to provide an overview for readers to conduct forecasting method research. This study aims to describe the profile of the spread of the virus and provide input on education policies in border areas for forecasting. This research may need to be more thematically up-to-date and slow in publication. Still, researchers believe this is useful for policymakers to determine policies from reading existing patterns using equations in forecasting methods. Especially in the era of disruption, which is full of uncertainty, knowledge like this is needed to make predictions. In this study, the characterization is divided into gender, age, occupation, and interaction. The results showed that the gender of COVID-19 patients in the border areas had the same proportion of both men and women, the age range of twenty to forty-eight years had a greater probability of being affected, employees/private sector were more dominant to be involved, groups and the most prevalent cause of transmission of COVID-19 is family interaction. In addition, using Brown's double smoothing exponential method shows that predictions for July, August, and November for suspects and patients with COVID-19 will increase. Thus, the recommendation from this research for the Education Office as a policy maker in border areas is that school learning activities should be postponed until conditions are feasible. Implementasi metode peramalan guna menentukan kebijakan model belajar mengajar saat pandemic di daerah perbatasanIndonesia merupakan negara kepulauan yang terdiri lebih dari tujuh belas ribu pulau, baik yang berada di pedalaman maupun di daerah perbatasan. Daerah perbatasan secara langsung atau tidak langsung menjadi pembatas dengan negara lain. Tujuan penelitian ini secara umum memberikan gambaran kepada para pembaca untuk melakukan sebuah penelitian metode peramalan. Secara kusus, dalam penelitian ini bertujuan untuk menggambarkan profil sebaran virus, dan memberikan masukan kebijakan pendidikan di daerah perbatasan atas peramalan yang dilakukan. Penelitian ini mungkin tidak up to date secara tema dan lambat dalam publikasi, namun peneliti berkeyakinan ini berguna bagi pengambil kebijakan untuk menentukan kebijakan dari membaca pola-pola yang ada menggunakan persamaan dalam metode peramalan. Apalagi di era disrupsi yang penuh dengan ketidak pastian, pengetahuan seperti ini sangat diperlukan untuk memprediksi. Dalam penelitian ini, karakterisasi dibagi menjadi empat yaitu jenis kelamin, usia, pekerjaan, dan interaksi. Hasil penelitian menunjukkan bahwa jenis kelamin pada pasien COVID-19 di daerah perbatasan memiliki proporsi yang sama baik laki-laki maupun perempuan, rentang usia dua puluh sampai empat puluh delapan tahun memiliki kemungkinan lebih besar untuk terkena, pegawai/swasta lebih dominan untuk terkena, kelompok lain dan juga penyebab paling dominan penularan COVID -19 adalah interaksi keluarga. Selain itu dengan menggunakan metode double smoothing exponential Brown menunjukkan bahwa prediksi Juli, Agustus hingga November kondisi suspek dan pasien COVID -19 akan naik. Dengan demikian, rekomendasi dari penelitian ini  untuk Dinas Pendidikan sebagai pengambil kebijakan di daerah perbatasan adalah kegiatan belajar di sekolah sebaiknya ditunda hingga keadaan sudah bisa dikatakan layak."/>
+<meta name="DC.Format" scheme="IMT" content="application/pdf"/>
+<meta name="DC.Identifier" content="52573"/>
+<meta name="DC.Identifier.pageNumber" content="35-46"/>
+<meta name="DC.Identifier.DOI" content="10.21831/jpipfip.v16i1.52573"/>
+<meta name="DC.Identifier.URI" content="https://journal.uny.ac.id/index.php/jpip/article/view/52573"/>
+<meta name="DC.Language" scheme="ISO639-1" content="en"/>
+<meta name="DC.Rights" content="Copyright (c) 2023 Jurnal Penelitian Ilmu Pendidikan"/>
+<meta name="DC.Rights" content=""/>
+<meta name="DC.Source" content="Jurnal Penelitian Ilmu Pendidikan"/>
+<meta name="DC.Source.ISSN" content="2541-5492"/>
+<meta name="DC.Source.Issue" content="1"/>
+<meta name="DC.Source.Volume" content="16"/>
+<meta name="DC.Source.URI" content="https://journal.uny.ac.id/index.php/jpip"/>
+<meta name="DC.Subject" xml:lang="en" content="forecasting methods"/>
+<meta name="DC.Subject" xml:lang="en" content="Covid-19"/>
+<meta name="DC.Subject" xml:lang="en" content="education policy"/>
+<meta name="DC.Subject" xml:lang="en" content="teaching and learning activities"/>
+<meta name="DC.Title" content="Implementation of forecasting methods to determine teaching and learning model policies during a pandemic in border areas"/>
+<meta name="DC.Type" content="Text.Serial.Journal"/>
+<meta name="DC.Type.articleType" content="Articles"/>
+<link rel="alternate" type="application/atom+xml" href="https://journal.uny.ac.id/index.php/jpip/gateway/plugin/AnnouncementFeedGatewayPlugin/atom">
+<link rel="alternate" type="application/rdf+xml" href="https://journal.uny.ac.id/index.php/jpip/gateway/plugin/AnnouncementFeedGatewayPlugin/rss">
+<link rel="alternate" type="application/rss+xml" href="https://journal.uny.ac.id/index.php/jpip/gateway/plugin/AnnouncementFeedGatewayPlugin/rss2">
+<link rel="alternate" type="application/atom+xml" href="https://journal.uny.ac.id/index.php/jpip/gateway/plugin/WebFeedGatewayPlugin/atom">
+<link rel="alternate" type="application/rdf+xml" href="https://journal.uny.ac.id/index.php/jpip/gateway/plugin/WebFeedGatewayPlugin/rss">
+<link rel="alternate" type="application/rss+xml" href="https://journal.uny.ac.id/index.php/jpip/gateway/plugin/WebFeedGatewayPlugin/rss2">
+
+	<link rel="stylesheet" href="../assets/journal.uny.ac.id/index.php/jpip/$$$call$$$/page/page/css-f3842390.css" type="text/css" /><link rel="stylesheet" href="../assets/journal.uny.ac.id/lib/pkp/styles/fontawesome/fontawesome-a2782a3a.css" type="text/css" /><link rel="stylesheet" href="../assets/journal.uny.ac.id/public/journals/39/styleSheet-03d3d4ee.css" type="text/css" />
+</head>
+<body class="pkp_page_article pkp_op_view has_site_logo" dir="ltr">
+
+	<div class="pkp_structure_page">
+
+				<header class="pkp_structure_head" id="headerNavigationContainer" role="banner">
+						
+ <nav class="cmp_skip_to_content" aria-label="Jump to content links">
+	<a href="../index.html#pkp_content_main">Skip to main content</a>
+	<a href="../index.html#siteNav">Skip to main navigation menu</a>
+		<a href="../index.html#pkp_content_footer">Skip to site footer</a>
+</nav>
+
+			<div class="pkp_head_wrapper">
+
+				<div class="pkp_site_name_wrapper">
+					<button class="pkp_site_nav_toggle">
+						<span>Open Menu</span>
+					</button>
+										<div class="pkp_site_name">
+																<a href="../index.html" class="is_img">
+							<img src="../assets/journal.uny.ac.id/public/journals/39/pageHeaderLogoImage_en_US.png" width="1804" height="350" alt="jpip" />
+						</a>
+										</div>
+				</div>
+
+				
+				<nav class="pkp_site_nav_menu" aria-label="Site Navigation">
+					<a id="siteNav"></a>
+					<div class="pkp_navigation_primary_row">
+						<div class="pkp_navigation_primary_wrapper">
+																				<ul id="navigationPrimary" class="pkp_navigation_primary pkp_nav_list">
+								<li class="">
+				<a href="../index.html">
+					Home
+				</a>
+							</li>
+								<li class="">
+				<a href="../about.html">
+					About
+				</a>
+									<ul>
+																					<li class="">
+									<a href="../about.html">
+										About the Journal
+									</a>
+								</li>
+																												<li class="">
+									<a href="../submissions.html">
+										Submissions
+									</a>
+								</li>
+																												<li class="">
+									<a href="../author-guidelines.html">
+										AUTHOR GUIDELINES
+									</a>
+								</li>
+																												<li class="">
+									<a href="../editorial-team.html">
+										Editorial Team
+									</a>
+								</li>
+																												<li class="">
+									<a href="../privacy.html">
+										Privacy Statement
+									</a>
+								</li>
+																												<li class="">
+									<a href="../contact.html">
+										Contact
+									</a>
+								</li>
+																		</ul>
+							</li>
+								<li class="">
+				<a href="../current.html">
+					Current
+				</a>
+							</li>
+								<li class="">
+				<a href="../archive.html">
+					Archives
+				</a>
+							</li>
+								<li class="">
+				<a href="../announcements.html">
+					Announcements
+				</a>
+							</li>
+			</ul>
+
+				
+
+																						<div class="pkp_navigation_search_wrapper">
+									<a href="../search.html" class="pkp_search pkp_search_desktop">
+										<span class="fa fa-search" aria-hidden="true"></span>
+										Search
+									</a>
+								</div>
+													</div>
+					</div>
+					<div class="pkp_navigation_user_wrapper" id="navigationUserWrapper">
+							<ul id="navigationUser" class="pkp_navigation_user pkp_nav_list">
+								<li class="profile">
+				<a href="https://journal.uny.ac.id/index.php/jpip/user/register">
+					Register
+				</a>
+							</li>
+								<li class="profile">
+				<a href="https://journal.uny.ac.id/index.php/jpip/login">
+					Login
+				</a>
+							</li>
+										</ul>
+
+					</div>
+				</nav>
+			</div><!-- .pkp_head_wrapper -->
+		</header><!-- .pkp_structure_head -->
+
+						<div class="pkp_structure_content has_sidebar">
+			<div class="pkp_structure_main" role="main">
+				<a id="pkp_content_main"></a>
+
+<div class="page page_article">
+			<nav class="cmp_breadcrumbs" role="navigation" aria-label="You are here:">
+	<ol>
+		<li>
+			<a href="../index.html">
+				Home
+			</a>
+			<span class="separator">/</span>
+		</li>
+		<li>
+			<a href="../archive.html">
+				Archives
+			</a>
+			<span class="separator">/</span>
+		</li>
+					<li>
+				<a href="../issues/2443.html">
+					Vol. 16 No. 1 (2023): January–June
+				</a>
+				<span class="separator">/</span>
+			</li>
+				<li class="current" aria-current="page">
+			<span aria-current="page">
+									Articles
+							</span>
+		</li>
+	</ol>
+</nav>
+	
+		  	 
+
+
+
+<style>
+.__dimensions_badge_embed__ .__dimensions_Badge_style_medium_circle .__dimensions_Badge_Image {
+    width: 80px;
+    height: 80px;
+}
+</style>
+
+<article class="obj_article_details">
+
+		
+	<h1 class="page_title">
+		Implementation of forecasting methods to determine teaching and learning model policies during a pandemic in border areas
+	</h1>
+
+	
+	<div class="row">
+		<div class="main_entry">
+
+							<section class="item authors">
+					<h2 class="pkp_screen_reader">Authors</h2>
+					<ul class="authors">
+											<li>
+							<span class="name">
+								Irfan Wahyu Prananto
+							</span>
+															<span class="affiliation">
+									(Scopus ID: 57220579532) Universitas Negeri Yogyakarta, Indonesia 
+																	</span>
+																						<span class="orcid">
+									
+									<a href="http://orcid.org/0000-0003-1628-5197" target="_blank">
+										http://orcid.org/0000-0003-1628-5197
+									</a>
+								</span>
+													</li>
+											<li>
+							<span class="name">
+								Tubagus Pamungkas
+							</span>
+															<span class="affiliation">
+									Universitas Riau Kepulauan, Indonesia 
+																	</span>
+																				</li>
+											<li>
+							<span class="name">
+								Riyan Hidayat
+							</span>
+															<span class="affiliation">
+									Faculty of Educational Studies, Universiti Putra Malaysia, Malaysia, Malaysia 
+																	</span>
+																				</li>
+										</ul>
+				</section>
+			
+																		
+														<section class="item doi">
+						<h2 class="label">
+														DOI:
+						</h2>
+						<span class="value">
+							<a href="https://doi.org/10.21831/jpipfip.v16i1.52573">
+								https://doi.org/10.21831/jpipfip.v16i1.52573
+							</a>
+						</span>
+					</section>
+							
+									<section class="item keywords">
+				<h2 class="label">
+										Keywords:
+				</h2>
+				<span class="value">
+											forecasting methods, 											Covid-19, 											education policy, 											teaching and learning activities									</span>
+			</section>
+			
+										<section class="item abstract">
+					<h2 class="label">Abstract</h2>
+					<div class="abstrak">
+					<p>Indonesia is an archipelagic country with more than seventeen thousand islands, both in the interior and border areas. The border area is directly or indirectly a barrier to other countries. The purpose of this study is to provide an overview for readers to conduct forecasting method research. This study aims to describe the profile of the spread of the virus and provide input on education policies in border areas for forecasting. This research may need to be more thematically up-to-date and slow in publication. Still, researchers believe this is useful for policymakers to determine policies from reading existing patterns using equations in forecasting methods. Especially in the era of disruption, which is full of uncertainty, knowledge like this is needed to make predictions. In this study, the characterization is divided into gender, age, occupation, and interaction. The results showed that the gender of COVID-19 patients in the border areas had the same proportion of both men and women, the age range of twenty to forty-eight years had a greater probability of being affected, employees/private sector were more dominant to be involved, groups and the most prevalent cause of transmission of COVID-19 is family interaction. In addition, using Brown's double smoothing exponential method shows that predictions for July, August, and November for suspects and patients with COVID-19 will increase. Thus, the recommendation from this research for the Education Office as a policy maker in border areas is that school learning activities should be postponed until conditions are feasible. </p><p><br></p><p><strong><em>Implementasi metode peramalan guna menentukan kebijakan model belajar mengajar saat pandemic di daerah perbatasan</em></strong></p><p><em>Indonesia merupakan negara kepulauan yang terdiri lebih dari tujuh belas ribu pulau, baik yang berada di pedalaman maupun di daerah perbatasan. Daerah perbatasan secara langsung atau tidak langsung menjadi pembatas dengan negara lain. Tujuan penelitian ini secara umum memberikan gambaran kepada para pembaca untuk melakukan sebuah penelitian metode peramalan. Secara kusus, dalam penelitian ini bertujuan untuk menggambarkan profil sebaran virus, dan memberikan masukan kebijakan pendidikan di daerah perbatasan atas peramalan yang dilakukan. Penelitian ini mungkin tidak up to date secara tema dan lambat dalam publikasi, namun peneliti berkeyakinan ini berguna bagi pengambil kebijakan untuk menentukan kebijakan dari membaca pola-pola yang ada menggunakan persamaan dalam metode peramalan. Apalagi di era disrupsi yang penuh dengan ketidak pastian, pengetahuan seperti ini sangat diperlukan untuk memprediksi. Dalam penelitian ini, karakterisasi dibagi menjadi empat yaitu jenis kelamin, usia, pekerjaan, dan interaksi. Hasil penelitian menunjukkan bahwa jenis kelamin pada pasien COVID-19 di daerah perbatasan memiliki proporsi yang sama baik laki-laki maupun perempuan, rentang usia dua puluh sampai empat puluh delapan tahun memiliki kemungkinan lebih besar untuk terkena, pegawai/swasta lebih dominan untuk terkena, kelompok lain dan juga penyebab paling dominan penularan COVID -19 adalah interaksi keluarga. Selain itu dengan menggunakan metode double smoothing exponential Brown menunjukkan bahwa prediksi Juli, Agustus hingga November kondisi suspek dan pasien COVID -19 akan naik. Dengan demikian, rekomendasi dari penelitian ini  untuk Dinas Pendidikan sebagai pengambil kebijakan di daerah perbatasan adalah kegiatan belajar di sekolah sebaiknya ditunda hingga keadaan sudah bisa dikatakan layak.</em></p>
+					</div>
+				</section>
+			
+			
+
+																																	
+										<section class="item references">
+					<h2 class="label">
+						References
+					</h2>
+					<div class="value">
+																					<p>Aimran, A. N., &amp; Afthanorhan, A. (2014). A comparison between single exponential smoothing (SES), double exponential smoothing (DES), holt's (brown) and adaptive response rate exponential smoothing (ARRES) techniques in forecasting Malaysia population. Global Journal of Mathematical Analysis, 2(4), 276. <a href="https://doi.org/10.14419/gjma.v2i4.3253">https://doi.org/10.14419/gjma.v2i4.3253</a> </p>
+															<p>Armstrong, J. S. (2001). Evaluating forecasting methods. In Principles of Forecasting: A Handbook for Researchers and Practitioners. Kluwer. <a href="https://repository.upenn.edu/handle/20.500.14332/39302">https://repository.upenn.edu/handle/20.500.14332/39302</a> </p>
+															<p>Baker, M. G., Peckham, T. K., &amp; Seixas, N. S. (2020). Estimating the burden of United States workers exposed to infection or disease: A key factor in containing risk of COVID-19 infection. PLOS ONE, 15(4), e0232452. <a href="https://doi.org/10.1371/journal.pone.0232452">https://doi.org/10.1371/journal.pone.0232452</a> </p>
+															<p>Batty, M. (1969). Monitoring an exponential smoothing forecasting system. Journal of the Operational Research Society, 20(3), 319–325. <a href="https://doi.org/10.1057/jors.1969.76">https://doi.org/10.1057/jors.1969.76</a> </p>
+															<p>Breslow, N. (1970). A generalized Kruskal-Wallis test for comparing K samples subject to unequal patterns of censorship. Biometrika, 57(3), 579–594. <a href="https://doi.org/10.1093/biomet/57.3.579">https://doi.org/10.1093/biomet/57.3.579</a> </p>
+															<p>Brown, B. M., &amp; Hettmansperger, T. P. (2002). Kruskal–Wallis, multiple comparisons and efron dice. Australian &amp; New Zealand Journal of Statistics, 44(4), 427–438. <a href="https://doi.org/10.1111/1467-842X.00244">https://doi.org/10.1111/1467-842X.00244</a> </p>
+															<p>Brumback, B., &amp; Srinath, M. (1987). A Chi-square test for fault-detection in Kalman filters. IEEE Transactions on Automatic Control, 32(6), 552–554. <a href="https://doi.org/10.1109/TAC.1987.1104658">https://doi.org/10.1109/TAC.1987.1104658</a> </p>
+															<p>Burdorf, A., Porru, F., &amp; Rugulies, R. (2020). The COVID-19 (Coronavirus) pandemic: Consequences for occupational health. Scandinavian Journal of Work, Environment &amp; Health, 46(3), 229–230. <a href="https://doi.org/10.5271/sjweh.3893">https://doi.org/10.5271/sjweh.3893</a> </p>
+															<p>Bwire, G. M. (2020). Coronavirus: Why men are more vulnerable to Covid-19 than women? SN Comprehensive Clinical Medicine, 2(7), 874–876. <a href="https://doi.org/10.1007/s42399-020-00341-w">https://doi.org/10.1007/s42399-020-00341-w</a> </p>
+															<p>Chan, Y., &amp; Walmsley, R. P. (1997). Learning and understanding the Kruskal-Wallis one-way analysis-of-variance-by-ranks test for differences among three or more independent groups. Physical Therapy, 77(12), 1755–1761. <a href="https://doi.org/10.1093/ptj/77.12.1755">https://doi.org/10.1093/ptj/77.12.1755</a> </p>
+															<p>Chatfield, C., Wheelwright, S. C., &amp; Makridakis, S. (1978). Forecasting methods for management. Journal of the Royal Statistical Society. Series A (General), 141(1), 113. <a href="https://doi.org/10.2307/2344788">https://doi.org/10.2307/2344788</a> </p>
+															<p>Chen, Y., Zheng, L., Song, J., Huang, L., &amp; Zheng, J. (2022). Revealing the impact of urban form on COVID-19 based on machine learning: Taking Macau as an example. Sustainability, 14(21), 14341. <a href="https://doi.org/10.3390/su142114341">https://doi.org/10.3390/su142114341</a> </p>
+															<p>Chinazzi, M., Davis, J. T., Ajelli, M., Gioannini, C., Litvinova, M., Merler, S., Pastore y Piontti, A., Mu, K., Rossi, L., Sun, K., Viboud, C., Xiong, X., Yu, H., Halloran, M. E., Longini, I. M., &amp; Vespignani, A. (2020). The effect of travel restrictions on the spread of the 2019 novel coronavirus (COVID-19) outbreak. Science, 368(6489), 395–400. <a href="https://doi.org/10.1126/science.aba9757">https://doi.org/10.1126/science.aba9757</a> </p>
+															<p>Cruz, A. T., &amp; Zeichner, S. L. (2020). COVID-19 in children: Initial characterization of the pediatric disease. Pediatrics, 145(6). <a href="https://doi.org/10.1542/peds.2020-0834">https://doi.org/10.1542/peds.2020-0834</a> </p>
+															<p>Dalton, L. A., &amp; Dougherty, E. R. (2011). Bayesian minimum mean-square error estimation for classification error"”Part I: Definition and the Bayesian MMSE error estimator for discrete classification. IEEE Transactions on Signal Processing, 59(1), 115–129. <a href="https://doi.org/10.1109/TSP.2010.2084572">https://doi.org/10.1109/TSP.2010.2084572</a> </p>
+															<p>Dong, Y., Mo, X., Hu, Y., Qi, X., Jiang, F., Jiang, Z., &amp; Tong, S. (2020). Epidemiology of COVID-19 among children in China. Pediatrics, 145(6). <a href="https://doi.org/10.1542/peds.2020-0702">https://doi.org/10.1542/peds.2020-0702</a> </p>
+															<p>Goh, E., &amp; Baum, T. (2021). Job perceptions of generation Z hotel employees towards working in Covid-19 quarantine hotels: The role of meaningful work. International Journal of Contemporary Hospitality Management, 33(5), 1688–1710. <a href="https://doi.org/10.1108/IJCHM-11-2020-1295">https://doi.org/10.1108/IJCHM-11-2020-1295</a> </p>
+															<p>Hamadani, J. D., Hasan, M. I., Baldi, A. J., Hossain, S. J., Shiraji, S., Bhuiyan, M. S. A., Mehrin, S. F., Fisher, J., Tofail, F., Tipu, S. M. M. U., Grantham-McGregor, S., Biggs, B.-A., Braat, S., &amp; Pasricha, S.-R. (2020). Immediate impact of stay-at-home orders to control COVID-19 transmission on socioeconomic conditions, food insecurity, mental health, and intimate partner violence in Bangladeshi women and their families: An interrupted time series. The Lancet Global Health, 8(11), e1380–e1389. <a href="https://doi.org/10.1016/S2214-109X(20)30366-1">https://doi.org/10.1016/S2214-109X(20)30366-1</a> </p>
+															<p>Hannan, E. J., &amp; Kavalieris, L. (1984). A method for autoregressive-moving average estimation. Biometrika, 71(2), 273–280. <a href="https://doi.org/10.1093/biomet/71.2.273">https://doi.org/10.1093/biomet/71.2.273</a> </p>
+															<p>Hansun, S. (2013). A new approach of moving average method in time series analysis. 2013 Conference on New Media Studies (CoNMedia), 1–4. <a href="https://doi.org/10.1109/CoNMedia.2013.6708545">https://doi.org/10.1109/CoNMedia.2013.6708545</a> </p>
+															<p>Hecke, T. Van. (2012). Power study of anova versus Kruskal-Wallis test. Journal of Statistics and Management Systems, 15(2–3), 241–247. <a href="https://doi.org/10.1080/09720510.2012.10701623">https://doi.org/10.1080/09720510.2012.10701623</a> </p>
+															<p>Hidayat, A. A., Arief, Z., &amp; Happyanto, D. C. (2015). Mobile application with simple moving average filtering for monitoring finger muscles therapy of post-stroke people. 2015 International Electronics Symposium (IES), 1–6. <a href="https://doi.org/10.1109/ELECSYM.2015.7380803">https://doi.org/10.1109/ELECSYM.2015.7380803</a> </p>
+															<p>Huang, J., Li, C., &amp; Yu, J. (2012). Resource prediction based on double exponential smoothing in cloud computing. 2012 2nd International Conference on Consumer Electronics, Communications and Networks (CECNet), 2056–2060. <a href="https://doi.org/10.1109/CECNet.2012.6201461">https://doi.org/10.1109/CECNet.2012.6201461</a> </p>
+															<p>Jean Lee, S. K. (1992). Quantitative versus qualitative research methods "” Two approaches to organisation studies. Asia Pacific Journal of Management, 9(1), 87–94. <a href="https://doi.org/10.1007/BF01732039">https://doi.org/10.1007/BF01732039</a> </p>
+															<p>Jin, J.-M., Bai, P., He, W., Wu, F., Liu, X.-F., Han, D.-M., Liu, S., &amp; Yang, J.-K. (2020). Gender differences in patients with COVID-19: Focus on severity and mortality. Frontiers in Public Health, 8. <a href="https://doi.org/10.3389/fpubh.2020.00152">https://doi.org/10.3389/fpubh.2020.00152</a> </p>
+															<p>Kanetaki, Z., Stergiou, C., Bekas, G., Jacques, S., Troussas, C., Sgouropoulou, C., &amp; Ouahabi, A. (2022). Grade prediction modeling in hybrid learning environments for sustainable engineering education. Sustainability, 14(9), 5205. <a href="https://doi.org/10.3390/su14095205">https://doi.org/10.3390/su14095205</a> </p>
+															<p>Kelvin, A. A., &amp; Halperin, S. (2020). COVID-19 in children: The link in the transmission chain. The Lancet Infectious Diseases, 20(6), 633–634. <a href="https://doi.org/10.1016/S1473-3099(20)30236-X">https://doi.org/10.1016/S1473-3099(20)30236-X</a> </p>
+															<p>King, W. C., Rubinstein, M., Reinhart, A., &amp; Mejia, R. (2021). COVID-19 vaccine hesitancy January-May 2021 among 18–64 year old US adults by employment and occupation. Preventive Medicine Reports, 24, 101569. <a href="https://doi.org/10.1016/j.pmedr.2021.101569">https://doi.org/10.1016/j.pmedr.2021.101569</a> </p>
+															<p>Kopel, J., Perisetti, A., Roghani, A., Aziz, M., Gajendran, M., &amp; Goyal, H. (2020). Racial and gender-based differences in COVID-19. Frontiers in Public Health, 8. <a href="https://doi.org/10.3389/fpubh.2020.00418">https://doi.org/10.3389/fpubh.2020.00418</a> </p>
+															<p>Kraemer, M. U. G., Yang, C.-H., Gutierrez, B., Wu, C.-H., Klein, B., Pigott, D. M., du Plessis, L., Faria, N. R., Li, R., Hanage, W. P., Brownstein, J. S., Layan, M., Vespignani, A., Tian, H., Dye, C., Pybus, O. G., &amp; Scarpino, S. V. (2020). The effect of human mobility and control measures on the COVID-19 epidemic in China. Science, 368(6490), 493–497. <a href="https://doi.org/10.1126/science.abb4218">https://doi.org/10.1126/science.abb4218</a> </p>
+															<p>Lau, H., Khosrawipour, V., Kocbach, P., Mikolajczyk, A., Schubert, J., Bania, J., &amp; Khosrawipour, T. (2020). The positive impact of lockdown in Wuhan on containing the COVID-19 outbreak in China. Journal of Travel Medicine, 27(3). <a href="https://doi.org/10.1093/jtm/taaa037">https://doi.org/10.1093/jtm/taaa037</a> </p>
+															<p>Lee, S., &amp; Fambro, D. B. (1999). Application of subset autoregressive integrated moving average model for short-term freeway traffic volume forecasting. Transportation Research Record: Journal of the Transportation Research Board, 1678(1), 179–188. <a href="https://doi.org/10.3141/1678-22">https://doi.org/10.3141/1678-22</a> </p>
+															<p>Lekfuangfu, W. N., Piyapromdee, S., Porapakkarm, P., &amp; Wasi, N. (2020). On Covid-19: New implications of job task requirements and spouse's occupational sorting. SSRN Electronic Journal. <a href="https://doi.org/10.2139/ssrn.3583954">https://doi.org/10.2139/ssrn.3583954</a> </p>
+															<p>Lewandowski, P. (2020). Occupational exposure to contagion and the spread of Covid-19 in Europe. SSRN Electronic Journal, IZA Discus. <a href="https://doi.org/10.2139/ssrn.3596694">https://doi.org/10.2139/ssrn.3596694</a> </p>
+															<p>Murphy, A. H. (1988). Skill scores based on the mean square error and their relationships to the correlation coefficient. Monthly Weather Review, 116(12), 2417–2424. <a href="https://doi.org/10.1175/1520-0493(1988)116">https://doi.org/10.1175/1520-0493(1988)116</a>&lt;2417:SSBOTM&gt;2.0.CO;2 </p>
+															<p>Posfay-Barbe, K. M., Wagner, N., Gauthey, M., Moussaoui, D., Loevy, N., Diana, A., &amp; L'Huillier, A. G. (2020). COVID-19 in children and the dynamics of infection in families. Pediatrics, 146(2). <a href="https://doi.org/10.1542/peds.2020-1576">https://doi.org/10.1542/peds.2020-1576</a> </p>
+															<p>Prem, K., Liu, Y., Russell, T. W., Kucharski, A. J., Eggo, R. M., Davies, N., Jit, M., Klepac, P., Flasche, S., Clifford, S., Pearson, C. A. B., Munday, J. D., Abbott, S., Gibbs, H., Rosello, A., Quilty, B. J., Jombart, T., Sun, F., Diamond, C., ... Hellewell, J. (2020). The effect of control strategies to reduce social mixing on outcomes of the COVID-19 epidemic in Wuhan, China: a modelling study. The Lancet Public Health, 5(5), e261–e270. <a href="https://doi.org/10.1016/S2468-2667(20)30073-6">https://doi.org/10.1016/S2468-2667(20)30073-6</a> </p>
+															<p>Rajmil, L. (2020). Role of children in the transmission of the COVID-19 pandemic: A rapid scoping review. BMJ Paediatrics Open, 4(1), e000722. <a href="https://doi.org/10.1136/bmjpo-2020-000722">https://doi.org/10.1136/bmjpo-2020-000722</a> </p>
+															<p>Satorra, A., &amp; Bentler, P. M. (2001). A scaled difference chi-square test statistic for moment structure analysis. Psychometrika, 66(4), 507–514. <a href="https://doi.org/10.1007/BF02296192">https://doi.org/10.1007/BF02296192</a> </p>
+															<p>Sim, M. R. (2020). The COVID-19 pandemic: Major risks to healthcare and other workers on the front line. Occupational and Environmental Medicine, 77(5), 281–282. <a href="https://doi.org/10.1136/oemed-2020-106567">https://doi.org/10.1136/oemed-2020-106567</a> </p>
+															<p>Singer, M. E., Taub, I. B., &amp; Kaelber, D. C. (2022). Risk of Myocarditis from COVID-19 infection in people under age 20: A population-based analysis. MedRxiv. <a href="https://doi.org/10.1101/2021.07.23.21260998">https://doi.org/10.1101/2021.07.23.21260998</a> </p>
+															<p>Snyder, R. D., Koehler, A. B., &amp; Ord, J. K. (2002). Forecasting for inventory control with exponential smoothing. International Journal of Forecasting, 18(1), 5–18. <a href="https://doi.org/10.1016/S0169-2070(01)00109-1">https://doi.org/10.1016/S0169-2070(01)00109-1</a> </p>
+															<p>Syed, F. U., Baloch, M., &amp; Awan, M. H. (2021). Covid-19 and rural education, a perspective on global education system: AMSTAR tool as systematic literature review. IOSR Journal of Business and Management (IOSR-JBM, 23(8). <a href="https://doi.org/10.9790/487X-2308063048">https://doi.org/10.9790/487X-2308063048</a> </p>
+															<p>Thibaut, F., &amp; van Wijngaarden-Cremers, P. J. M. (2020). Women's mental health in the time of Covid-19 pandemic. Frontiers in Global Women's Health, 1. <a href="https://doi.org/10.3389/fgwh.2020.588372">https://doi.org/10.3389/fgwh.2020.588372</a> </p>
+															<p>Wang, C. (2008). Quantitative analysis on the Bullwhip effect in a supply chain using double moving average and double exponential smoothing forecasts. 2008 International Symposiums on Information Processing, 114–118. <a href="https://doi.org/10.1109/ISIP.2008.32">https://doi.org/10.1109/ISIP.2008.32</a> </p>
+															<p>Weatherford, L. R., &amp; Kimes, S. E. (2003). A comparison of forecasting methods for hotel revenue management. International Journal of Forecasting, 19(3), 401–415. <a href="https://doi.org/10.1016/S0169-2070(02)00011-0">https://doi.org/10.1016/S0169-2070(02)00011-0</a> </p>
+															<p>Wenham, C., Smith, J., &amp; Morgan, R. (2020). COVID-19: The gendered impacts of the outbreak. The Lancet, 395(10227), 846–848. <a href="https://doi.org/10.1016/S0140-6736(20)30526-2">https://doi.org/10.1016/S0140-6736(20)30526-2</a> </p>
+															<p>Yilmaz, K. (2013). Comparison of quantitative and qualitative research traditions: Epistemological, theoretical, and methodological differences. European Journal of Education, 48(2), 311–325. <a href="https://doi.org/10.1111/ejed.12014">https://doi.org/10.1111/ejed.12014</a> </p>
+															<p>Zigron, A., Dror, A. A., Morozov, N. G., Shani, T., Haj Khalil, T., Eisenbach, N., Rayan, D., Daoud, A., Kablan, F., Marei, H., Sela, E., &amp; Srouji, S. (2021). COVID-19 vaccine acceptance among dental professionals based on employment status during the Pandemic. Frontiers in Medicine, 8. <a href="https://doi.org/10.3389/fmed.2021.618403">https://doi.org/10.3389/fmed.2021.618403</a> </p>
+																		</div>
+				</section>
+			
+		</div><!-- .main_entry -->
+
+		<div class="entry_details">
+
+						
+										<div class="item galleys">
+					<h2 class="pkp_screen_reader">
+						Downloads
+					</h2>
+					<ul class="value galleys_links">
+													<li>
+								
+	
+							
+
+<a class="obj_galley_link pdf" href="../viewers/52573-20202.html">
+
+		
+	PDF
+
+	</a>
+							</li>
+											</ul>
+				</div>
+						
+						<div class="item published">
+				<section class="sub_item">
+					<h2 class="label">
+						Published
+					</h2>
+					<div class="value">
+																			<span>2023-03-21</span>
+																	</div>
+				</section>
+							</div>
+			
+										<div class="item citation">
+					<section class="sub_item citation_display">
+						<h2 class="label">
+							How to Cite
+						</h2>
+						<div class="value">
+							<div id="citationOutput" role="region" aria-live="polite">
+								<div class="csl-bib-body">
+  <div class="csl-entry">Prananto, I. W., Pamungkas, T., &#38; Hidayat, R. (2023). Implementation of forecasting methods to determine teaching and learning model policies during a pandemic in border areas. <i>Jurnal Penelitian Ilmu Pendidikan</i>, <i>16</i>(1), 35–46. https://doi.org/10.21831/jpipfip.v16i1.52573</div>
+</div>
+							</div>
+							<div class="citation_formats">
+								<button class="cmp_button citation_formats_button" aria-controls="cslCitationFormats" aria-expanded="false" data-csl-dropdown="true">
+									More Citation Formats
+								</button>
+								<div id="cslCitationFormats" class="citation_formats_list" aria-hidden="true">
+									<ul class="citation_formats_styles">
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://journal.uny.ac.id/index.php/jpip/citationstylelanguage/get/acm-sig-proceedings?submissionId=52573&amp;publicationId=42363"
+													data-load-citation
+													data-json-href="../citations/formats/52573-acm-sig-proceedings.json"
+												>
+													ACM
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://journal.uny.ac.id/index.php/jpip/citationstylelanguage/get/acs-nano?submissionId=52573&amp;publicationId=42363"
+													data-load-citation
+													data-json-href="../citations/formats/52573-acs-nano.json"
+												>
+													ACS
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://journal.uny.ac.id/index.php/jpip/citationstylelanguage/get/apa?submissionId=52573&amp;publicationId=42363"
+													data-load-citation
+													data-json-href="../citations/formats/52573-apa.json"
+												>
+													APA
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://journal.uny.ac.id/index.php/jpip/citationstylelanguage/get/associacao-brasileira-de-normas-tecnicas?submissionId=52573&amp;publicationId=42363"
+													data-load-citation
+													data-json-href="../citations/formats/52573-associacao-brasileira-de-normas-tecnicas.json"
+												>
+													ABNT
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://journal.uny.ac.id/index.php/jpip/citationstylelanguage/get/chicago-author-date?submissionId=52573&amp;publicationId=42363"
+													data-load-citation
+													data-json-href="../citations/formats/52573-chicago-author-date.json"
+												>
+													Chicago
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://journal.uny.ac.id/index.php/jpip/citationstylelanguage/get/harvard-cite-them-right?submissionId=52573&amp;publicationId=42363"
+													data-load-citation
+													data-json-href="../citations/formats/52573-harvard-cite-them-right.json"
+												>
+													Harvard
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://journal.uny.ac.id/index.php/jpip/citationstylelanguage/get/ieee?submissionId=52573&amp;publicationId=42363"
+													data-load-citation
+													data-json-href="../citations/formats/52573-ieee.json"
+												>
+													IEEE
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://journal.uny.ac.id/index.php/jpip/citationstylelanguage/get/modern-language-association?submissionId=52573&amp;publicationId=42363"
+													data-load-citation
+													data-json-href="../citations/formats/52573-modern-language-association.json"
+												>
+													MLA
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://journal.uny.ac.id/index.php/jpip/citationstylelanguage/get/turabian-fullnote-bibliography?submissionId=52573&amp;publicationId=42363"
+													data-load-citation
+													data-json-href="../citations/formats/52573-turabian-fullnote-bibliography.json"
+												>
+													Turabian
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://journal.uny.ac.id/index.php/jpip/citationstylelanguage/get/vancouver?submissionId=52573&amp;publicationId=42363"
+													data-load-citation
+													data-json-href="../citations/formats/52573-vancouver.json"
+												>
+													Vancouver
+												</a>
+											</li>
+																			</ul>
+																			<div class="label">
+											Download Citation
+										</div>
+										<ul class="citation_formats_styles">
+																							<li>
+													<a href="../citations/52573.ris">
+														<span class="fa fa-download"></span>
+														Endnote/Zotero/Mendeley (RIS)
+													</a>
+												</li>
+																							<li>
+													<a href="../citations/52573.bib">
+														<span class="fa fa-download"></span>
+														BibTeX
+													</a>
+												</li>
+																					</ul>
+																	</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			
+										<div class="item issue">
+
+											<section class="sub_item">
+							<h2 class="label">
+								Issue
+							</h2>
+							<div class="value">
+								<a class="title" href="../issues/2443.html">
+									Vol. 16 No. 1 (2023): January–June
+								</a>
+							</div>
+						</section>
+					
+											<section class="sub_item">
+							<h2 class="label">
+								Section
+							</h2>
+							<div class="value">
+								Articles
+							</div>
+						</section>
+					
+									</div>
+			
+																		
+						    						
+			<div class="item issue">
+			    <section class="sub_item">
+			    <h2 class="label">Citation Check</h2>
+			    <div class="value">
+			        
+			    </div>
+			    </section>
+			</div>
+            
+										<div class="item copyright">
+					<h2 class="label">
+						License
+					</h2>
+										<p><img src="../assets/journal.uny.ac.id/public/site/images/fitrianafip/88x31.png" alt="" /></p>Jurnal Penelitian Ilmu Pendidikan (JPIP) by <a href="http://fip.uny.ac.id/">Fakultas Ilmu Pendidikan UNY</a> is licensed under a <a href="https://journal.uny.ac.id/index.php/jpip/manager/setup/&lt;a%20rel=&quot;license&quot;%20href=&quot;http:/creativecommons.org/licenses/by-sa/4.0/&quot;&gt;&lt;img%20alt=&quot;Lisensi%20Creative%20Commons&quot;%20style=&quot;border-width:0&quot;%20src=&quot;https:/i.creativecommons.org/l/by-sa/4.0/88x31.png&quot;%20/&gt;&lt;/a&gt;&lt;br%20/&gt;Ciptaan%20disebarluaskan%20di%20bawah%20&lt;a%20rel=&quot;license&quot;%20href=&quot;http:/creativecommons.org/licenses/by-sa/4.0/&quot;&gt;Lisensi%20Creative%20Commons%20Atribusi-BerbagiSerupa%204.0%20Internasional&lt;/a&gt;.">Creative Commons Attribution-ShareAlike 4.0 International License</a><span>, based an work at <a href="../index.html">https://journal.uny.ac.id/index.php/jpip/index</a>.</span>
+				</div>
+			
+			
+
+		</div><!-- .entry_details -->
+	</div><!-- .row -->
+
+</article>
+
+	<div id="articlesBySameAuthorList">
+				</div>
+<div id="articlesBySimilarityList">
+				<h3>
+			<a name="articlesBySimilarity">Similar Articles</a>
+		</h3>
+		<ul>
+
+											
+				<li>
+											Ardia Puti Paramitha,
+											Ni&#039;matul Istiqomah,
+											Siti Mastura,
+										<a href="../articles/52423.html">
+						The influence of problem-based learning and discovery learning models on learning outcomes
+					</a>
+					,
+					<a href="../issues/2443.html">
+						Jurnal Penelitian Ilmu Pendidikan: Vol. 16 No. 1 (2023): January–June
+					</a>
+									</li>
+											
+				<li>
+											Enika Vera Intania,
+											Sutama Sutama,
+										<a href="../articles/32979.html">
+						The role of character education in learning during the COVID-19 pandemic
+					</a>
+					,
+					<a href="../issues/1923.html">
+						Jurnal Penelitian Ilmu Pendidikan: Vol. 13 No. 2 (2020): July–December
+					</a>
+									</li>
+											
+				<li>
+											An-Nisa Apriani,
+											Intan Kurniasari Suwandi,
+											Yusinta Dwi Ariyani,
+											Indah Perdana Sari,
+										<a href="../articles/37909.html">
+						Penguatan Pendidikan Karakter pada Masa New Normal Covid-19 melalui Flipped Classroom
+					</a>
+					,
+					<a href="../issues/2122.html">
+						Jurnal Penelitian Ilmu Pendidikan: Vol. 14 No. 2 (2021): July–December
+					</a>
+									</li>
+											
+				<li>
+											Friska Ria Sitorus,
+											Pestaria Naibaho,
+											Wolter Parlindungan Silalahi,
+										<a href="../articles/52298.html">
+						Experience, challenges, and engagement amidst pandemic: The online learning to onsite learning
+					</a>
+					,
+					<a href="../issues/2443.html">
+						Jurnal Penelitian Ilmu Pendidikan: Vol. 16 No. 1 (2023): January–June
+					</a>
+									</li>
+											
+				<li>
+											Jayanti Jayanti,
+											Dinn Wahyudin,
+										<a href="../articles/19799.html">
+						How important are today's teacher development program contents for primary school teacher?
+					</a>
+					,
+					<a href="../issues/1679.html">
+						Jurnal Penelitian Ilmu Pendidikan: Vol. 12 No. 1 (2019): January–June
+					</a>
+									</li>
+											
+				<li>
+											A. Jauhar Fuad,
+										<a href="../articles/23592.html">
+						Method of discussion and learning styles towards student's critical thinking ability
+					</a>
+					,
+					<a href="../issues/1885.html">
+						Jurnal Penelitian Ilmu Pendidikan: Vol. 13 No. 1 (2020): January–June
+					</a>
+									</li>
+											
+				<li>
+											Mohammad Amin Lasaiba,
+											Irvan Lasaiba,
+											Arman Man Arfa,
+											Djamila Lasaiba,
+										<a href="../articles/56840.html">
+						The relationship between the moving class model, pedagogical competence, student learning motivation, and learning discipline in geography learning
+					</a>
+					,
+					<a href="../issues/2700.html">
+						Jurnal Penelitian Ilmu Pendidikan: Vol. 17 No. 1 (2024): January–June
+					</a>
+									</li>
+											
+				<li>
+											Lina Ambarwati,
+											Novi Trisnawati,
+										<a href="../articles/39564.html">
+						Keefektifan Pembelajaran Jarak Jauh bagi Siswa pada Mata Pelajaran Korespondensi
+					</a>
+					,
+					<a href="../issues/2122.html">
+						Jurnal Penelitian Ilmu Pendidikan: Vol. 14 No. 2 (2021): July–December
+					</a>
+									</li>
+											
+				<li>
+											Dadang Sukirman,
+										<a href="../articles/19748.html">
+						Profil kemandirian belajar mahasiswa bimbingan dan konseling
+					</a>
+					,
+					<a href="../issues/1670.html">
+						Jurnal Penelitian Ilmu Pendidikan: Vol. 11 No. 2 (2018): July–December
+					</a>
+									</li>
+											
+				<li>
+											Fikri Syahir Robi,
+											Putri Rahma Dianti,
+											Ning Rahayu Handayani,
+										<a href="../articles/60041.html">
+						Improving cognitive learning outcomes and communication skills through problem-based learning with lesson study
+					</a>
+					,
+					<a href="../issues/2577.html">
+						Jurnal Penelitian Ilmu Pendidikan: Vol. 16 No. 2 (2023): July–December
+					</a>
+									</li>
+					</ul>
+		<p id="articlesBySimilarityPages">
+			<strong>1</strong>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=2#articlesBySimilarity">2</a>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=3#articlesBySimilarity">3</a>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=4#articlesBySimilarity">4</a>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=5#articlesBySimilarity">5</a>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=6#articlesBySimilarity">6</a>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=7#articlesBySimilarity">7</a>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=8#articlesBySimilarity">8</a>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=9#articlesBySimilarity">9</a>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=10#articlesBySimilarity">10</a>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=11#articlesBySimilarity">11</a>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=12#articlesBySimilarity">12</a>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=13#articlesBySimilarity">13</a>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=14#articlesBySimilarity">14</a>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=15#articlesBySimilarity">15</a>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=16#articlesBySimilarity">16</a>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=17#articlesBySimilarity">17</a>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=2#articlesBySimilarity">&gt;</a>&nbsp;<a href="https://journal.uny.ac.id/index.php/jpip/article/view/52573?articlesBySimilarityPage=17#articlesBySimilarity">&gt;&gt;</a>&nbsp;
+		</p>
+		<p id="articlesBySimilaritySearch">
+						You may also <a href="../search.html?query=forecasting%20methods%20covid%20education%20policy%20teaching%20learning%20activities">start an advanced similarity search</a> for this article.
+		</p>
+	</div>
+
+
+</div><!-- .page -->
+
+	</div><!-- pkp_structure_main -->
+
+									<div class="pkp_structure_sidebar left" role="complementary" aria-label="Sidebar">
+				<div class="pkp_block block_custom" id="customblock-sidemenu">
+	<h2 class="title pkp_screen_reader">sidemenu</h2>
+	<div class="content">
+		<div class="content d-flex justify-content-center">
+<div style="background-color: #0e5609; color: white; padding: 10px; border: 1px solid #800e2a; border-radius: 5px; width: 250px;">
+<p style="text-align: center;"><strong>QUICK MENU</strong></p>
+<p style="background-color: white; text-align: center; border: 1px solid white; border-radius: 5px;"><a  href="../editorial-team.html"  rel="noopener"><strong>Editorial Team</strong></a></p>
+<p style="background-color: white; text-align: center; border: 1px solid white; border-radius: 5px;"><a  href="../peer-reviewers.html"  rel="noopener"><strong>Reviewer</strong></a></p>
+<p style="background-color: white; text-align: center; border: 1px solid white; border-radius: 5px;"><a  href="../focus-and-scope.html"  rel="noopener"><strong>Focus and Scope</strong></a></p>
+<p style="background-color: white; text-align: center; border: 1px solid white; border-radius: 5px;"><strong><a href="../publication-ethics.html">Publication Ethics</a></strong></p>
+<p style="background-color: white; text-align: center; border: 1px solid white; border-radius: 5px;"><a  href="../author-guidelines.html"  rel="noopener"><strong>Author Guidelines</strong></a></p>
+<p style="background-color: white; text-align: center; border: 1px solid white; border-radius: 5px;"><strong><a href="../publication-ethics.html#peerReview">Peer-Review Process</a></strong></p>
+<p style="background-color: white; text-align: center; border: 1px solid white; border-radius: 5px;"><strong><a href="../submissions.html#copyrightNotice">Copyright Notice</a></strong></p>
+<p style="background-color: white; text-align: center; border: 1px solid white; border-radius: 5px;"><strong><a  href="../author-fees.html"  rel="noopener">Article Publication Charge</a></strong></p>
+<p style="background-color: white; text-align: center; border: 1px solid white; border-radius: 5px;"><a  href="../about.html#openAccess"  rel="noopener"><strong>Open Access Policy</strong></a></p>
+<p style="background-color: white; text-align: center; border: 1px solid white; border-radius: 5px;"><a  href="../publication-ethics.html#plagiarismPolicy"  rel="noopener"><strong>Plagiarism Policy</strong></a></p>
+<p style="background-color: white; text-align: center; border: 1px solid white; border-radius: 5px;"><a href="../index.html#indexing"><strong>Indexing</strong></a></p>
+<p style="background-color: white; text-align: center; border: 1px solid white; border-radius: 5px;"><a  title="AI Policy" href="../ai-policy.html"  rel="noopener"><strong>AI Policy</strong></a></p>
+<p style="background-color: white; text-align: center; border: 1px solid white; border-radius: 5px;"><strong><a href="../contact.html">Contact</a></strong></p>
+</div>
+</div>
+	</div>
+</div>
+<div class="pkp_block block_web_feed">
+	<h2 class="title">Current Issue</h2>
+	<div class="content">
+		<ul>
+			<li>
+				<a href="https://journal.uny.ac.id/index.php/jpip/gateway/plugin/WebFeedGatewayPlugin/atom">
+					<img src="../assets/journal.uny.ac.id/lib/pkp/templates/images/atom.svg" alt="Atom logo">
+				</a>
+			</li>
+			<li>
+				<a href="https://journal.uny.ac.id/index.php/jpip/gateway/plugin/WebFeedGatewayPlugin/rss2">
+					<img src="../assets/journal.uny.ac.id/lib/pkp/templates/images/rss20_logo.svg" alt="RSS2 logo">
+				</a>
+			</li>
+			<li>
+				<a href="https://journal.uny.ac.id/index.php/jpip/gateway/plugin/WebFeedGatewayPlugin/rss">
+					<img src="../assets/journal.uny.ac.id/lib/pkp/templates/images/rss10_logo.svg" alt="RSS1 logo">
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="pkp_block block_custom" id="customblock-template">
+	<h2 class="title pkp_screen_reader">template</h2>
+	<div class="content">
+		<p><a href="../documents/template-jpip.docx" download="template-jpip.docx" rel="noopener"><img src="../assets/journal.uny.ac.id/public/site/images/juarisman/tombol_template.png" alt=""></a>&nbsp;</p>
+	</div>
+</div>
+<div class="pkp_block block_custom" id="customblock-tools">
+	<h2 class="title pkp_screen_reader">tools</h2>
+	<div class="content">
+		<h2 class="title">TOOLS</h2>
+<p><a title="TOOLS"><img src="../assets/journal.uny.ac.id/public/site/images/sarip/turnitin-logo-800x450.png" alt=""></a></p>
+<p><img src="../assets/journal.uny.ac.id/public/site/images/sarip/mendeley_150x150.png" alt=""></p>
+	</div>
+</div>
+<div class="pkp_block block_information">
+	<h2 class="title">Information</h2>
+	<div class="content">
+		<ul>
+							<li>
+					<a href="../readers.html">
+						For Readers
+					</a>
+				</li>
+										<li>
+					<a href="../authors.html">
+						For Authors
+					</a>
+				</li>
+										<li>
+					<a href="../librarians.html">
+						For Librarians
+					</a>
+				</li>
+					</ul>
+	</div>
+</div>
+<div class="pkp_block block_custom" id="customblock-sertifikat">
+	<h2 class="title pkp_screen_reader">sertifikat</h2>
+	<div class="content">
+		<p><img src="../assets/journal.uny.ac.id/public/site/images/fitrianafip/sertifikat-akreditasi-jpip-2027-page-0001.jpg" alt="" width="1528" height="1021"></p>
+	</div>
+</div>
+<div class="pkp_block block_Keywordcloud">
+	<h2 class="title">Keywords</h2>
+	<div class="content" id='wordcloud'></div>
+
+	<script>
+		function randomColor() {
+			var colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf'];
+			return colors[Math.floor(Math.random()*colors.length)];
+		}
+
+					document.addEventListener("DOMContentLoaded", function() {
+				var keywords = [{"text":"inclusive education","size":1},{"text":"ibu fatimah","size":1},{"text":"cognitive aspects","size":1},{"text":"affective aspects","size":1},{"text":"plickers","size":1},{"text":"formative assessment","size":1},{"text":"mahasiswa","size":1},{"text":"burnout akademik","size":1},{"text":"school burnout inventory","size":1},{"text":"character building","size":1},{"text":"bimbingan dan konseling","size":1},{"text":"keterampilan komunikasi","size":1},{"text":"karakter profesional","size":1},{"text":"karakter birokratis","size":1},{"text":"pembelajaran pai","size":1},{"text":"online tools","size":1},{"text":"kompetensi 4c","size":1},{"text":"strategi","size":1},{"text":"the reaction rate","size":1},{"text":"blended learning","size":1},{"text":"guided inquiry","size":1},{"text":"pendidikan nonformal","size":1},{"text":"program kompetensi","size":1},{"text":"pengembangan","size":1},{"text":"projek","size":1},{"text":"perilaku menyotek","size":1},{"text":"efikasi diri","size":1},{"text":"aktivitas belajar","size":1},{"text":"aplikasi telegram","size":1},{"text":"improve learning","size":1},{"text":"kepemimpinan","size":1},{"text":"bahasa inggris bisnis","size":1},{"text":"monitoring pelatihan","size":1},{"text":"cinta damai","size":1},{"text":"dekadensi moral","size":1},{"text":"buku panduan","size":1},{"text":"kebugaran terkait kesehatan","size":1},{"text":"program spark","size":1},{"text":"pendidikan jasmani","size":1},{"text":"working memory","size":1},{"text":"gross motor skill","size":1},{"text":"kognitif","size":1},{"text":"aktivitas fisik","size":1},{"text":"evaluasi pelatihan","size":1},{"text":"e-learning","size":1},{"text":"kemandirian","size":1},{"text":"pengelolaan","size":1},{"text":"kedisiplinan","size":1},{"text":"regulasi diri","size":1},{"text":"media puzzle","size":1}];
+				var totalWeight = 0;
+				var width = 300;
+				var height = 200;
+				var transitionDuration = 200;
+				var length_keywords = keywords.length;
+				var layout = d3.layout.cloud();
+
+				layout.size([width, height])
+					.words(keywords)
+					.fontSize(function(d)
+					{
+						return fontSize(+d.size);
+					})
+					.on('end', draw);
+
+				var svg = d3.select("#wordcloud").append("svg")
+					.attr("viewBox", "0 0 " + width + " " + height)
+					.attr("width", '100%');
+
+				function update() {
+					var words = layout.words();
+					fontSize = d3.scaleLinear().range([16, 34]);
+					if (words.length) {
+						fontSize.domain([+words[words.length - 1].size || 1, +words[0].size]);
+					}
+				}
+
+				keywords.forEach(function(item,index){totalWeight += item.size;});
+
+				update();
+
+				function draw(words, bounds) {
+					var w = layout.size()[0],
+						h = layout.size()[1];
+
+					scaling = bounds
+						? Math.min(
+							w / Math.abs(bounds[1].x - w / 2),
+							w / Math.abs(bounds[0].x - w / 2),
+							h / Math.abs(bounds[1].y - h / 2),
+							h / Math.abs(bounds[0].y - h / 2),
+						) / 2
+						: 1;
+
+					svg
+					.append("g")
+					.attr(
+						"transform",
+						"translate(" + [w >> 1, h >> 1] + ")scale(" + scaling + ")",
+					)
+					.selectAll("text")
+						.data(words)
+					.enter().append("text")
+						.style("font-size", function(d) { return d.size + "px"; })
+						.style("font-family", 'serif')
+						.style("fill", randomColor)
+						.style('cursor', 'pointer')
+						.style('opacity', 0.7)
+						.attr('class', 'keyword')
+						.attr("text-anchor", "middle")
+						.attr("transform", function(d) {
+							return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+						})
+						.text(function(d) { return d.text; })
+						.on("click", function(d, i){
+							window.location = "../search.html?query=QUERY_SLUG".replace(/QUERY_SLUG/, encodeURIComponent(''+d.text+''));
+						})
+						.on("mouseover", function(d, i) {
+							d3.select(this).transition()
+								.duration(transitionDuration)
+								.style('font-size',function(d) { return (d.size + 3) + "px"; })
+								.style('opacity', 1);
+						})
+						.on("mouseout", function(d, i) {
+							d3.select(this).transition()
+								.duration(transitionDuration)
+								.style('font-size',function(d) { return d.size + "px"; })
+								.style('opacity', 0.7);
+						})
+						.on('resize', function() { update() });
+				}
+
+				layout.start();
+
+			});
+			</script>
+</div>
+
+			</div><!-- pkp_sidebar.left -->
+			</div><!-- pkp_structure_content -->
+
+<div class="pkp_structure_footer_wrapper" role="contentinfo">
+	<a id="pkp_content_footer"></a>
+
+	<div class="pkp_structure_footer">
+
+					<div class="pkp_footer_content">
+				
+
+			</div>
+		
+		<div class="pkp_brand_footer" role="complementary">
+			<a href="../publishing-system.html">
+				<img alt="More information about the publishing system, Platform and Workflow by OJS/PKP." src="../assets/journal.uny.ac.id/templates/images/ojs_brand.png">
+			</a>
+		</div>
+	</div>
+</div><!-- pkp_structure_footer_wrapper -->
+
+</div><!-- pkp_structure_page -->
+
+<script src="../assets/journal.uny.ac.id/lib/pkp/lib/vendor/components/jquery/jquery.min-a2782a3a.js" type="text/javascript"></script><script src="../assets/journal.uny.ac.id/lib/pkp/lib/vendor/components/jqueryui/jquery-ui.min-a2782a3a.js" type="text/javascript"></script><script src="../assets/journal.uny.ac.id/plugins/themes/default/js/lib/popper/popper-a2782a3a.js" type="text/javascript"></script><script src="../assets/journal.uny.ac.id/plugins/themes/default/js/lib/bootstrap/util-a2782a3a.js" type="text/javascript"></script><script src="../assets/journal.uny.ac.id/plugins/themes/default/js/lib/bootstrap/dropdown-a2782a3a.js" type="text/javascript"></script><script src="../assets/journal.uny.ac.id/plugins/themes/default/js/main-a2782a3a.js" type="text/javascript"></script><script src="../assets/journal.uny.ac.id/plugins/generic/citationStyleLanguage/js/articleCitation-a2782a3a.js" type="text/javascript"></script><script src="../assets/d3js.org/d3.v4-a2782a3a.js" type="text/javascript"></script><script src="../assets/cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery_master/LIB/d3.layout.cloud-a2782a3a.js" type="text/javascript"></script>
+
+
+</body>
+</html>

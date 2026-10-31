@@ -1,0 +1,6 @@
+/* Menyembunyikan gambar cover jurnal di sidebar/homepage */
+.pkp_block.block_journal .content img,
+.homepage_about .cover,
+.current_issue_sidebar .cover {
+    display: none !important;
+}
