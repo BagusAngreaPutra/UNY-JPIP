@@ -1,0 +1,4 @@
+# Shell scripts and cPanel configuration must use Unix line endings.
+/.cpanel.yml text eol=lf
+/.htaccess text eol=lf
+/deploy/*.sh text eol=lf

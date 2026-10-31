@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    # Default: document root domain utama. Ubah untuk addon domain/subfolder.
+    - /bin/bash deploy/cpanel.sh "$HOME/public_html"

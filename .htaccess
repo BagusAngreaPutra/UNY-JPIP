@@ -1,0 +1,23 @@
+# Serve the existing static homepage on Apache/cPanel.
+DirectoryIndex index.html index.php
+Options -Indexes
+
+# Resolve journal URLs and legacy HTML through the shared page router.
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^(.*?)(?:/(?:articles|issues|viewers))?/[^/]*$
+RewriteRule ^(?:(?:articles|issues|viewers)/)?[^/]+\.html$ %1/index.php [END]
+RewriteCond %{REQUEST_URI} ^(.*?)/index\.php(?:/.*)?$
+RewriteRule ^index\.php(?:/.*)?$ %1/index.php [END]
+RewriteCond %{REQUEST_URI} ^(.*)/$
+RewriteRule ^$ %1/index.php [END]
+
+AddType application/pdf .pdf
+AddType application/x-research-info-systems .ris
+AddType application/x-bibtex .bib
+AddType application/vnd.openxmlformats-officedocument.wordprocessingml.document .docx
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ris|bib|docx)$">
+        Header set Content-Disposition "attachment"
+    </FilesMatch>
+</IfModule>

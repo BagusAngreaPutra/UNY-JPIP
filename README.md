@@ -1,5 +1,18 @@
 # JPIP lokal
 
+## Web hosting / cPanel
+
+Situs siap dilayani di Apache/cPanel dengan PHP dan mod_rewrite, tanpa Node.js atau database.
+Halaman memakai jalur `/index.php/jpip/...`; PHP membaca HTML sumber yang sama dan
+menyesuaikan link navigasi tanpa mengubah isi atau desain. URL HTML lama dialihkan
+ke URL jurnal terkait. Pemetaan lengkap ada di panduan deployment.
+Panduan dan data Git Version Control ada di [CPANEL-DEPLOY.md](CPANEL-DEPLOY.md).
+Konfigurasi `.cpanel.yml` menerbitkan file web ke `$HOME/public_html` melalui
+`deploy/cpanel.sh`; sesuaikan target jika domain memakai document root lain.
+Isi, data, desain, dan struktur halaman tidak diubah oleh deployment.
+
+## Menjalankan dan memelihara versi lokal
+
 Di Windows, klik dua kali `start-site.cmd`. Pembuka ini menjalankan situs di `http://127.0.0.1:8765/index.html` dan membuka browser.
 
 Tombol **PDF** pada daftar artikel membuka halaman pembaca lokal. Tombol **Download** pada halaman pembaca menyimpan PDF ke folder unduhan browser. Situs ini tetap menggunakan semua PDF, gambar, ikon, dan stylesheet dari folder proyek.
