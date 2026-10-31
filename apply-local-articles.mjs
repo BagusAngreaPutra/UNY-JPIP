@@ -15,7 +15,7 @@ for (const a of articles) {
   await writeFile(`citations/${a.id}.bib`,bib);
 }
 
-for (const file of ['issues/3133.html','index.html','current.html']) {
+for (const file of ['issues/3133.html','index.html','index.php','current.html']) {
   let html = await readFile(file,'utf8');
   // Home/current may point to a different issue after a future source update.
   if (!html.includes('Vol. 19 No. 2 (2026)')) continue;
