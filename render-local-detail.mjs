@@ -31,10 +31,10 @@ export async function renderLocalDetail(template, a) {
   let html=template.replace(/<title>[\s\S]*?<\/title>/i,()=>`<title>${esc(a.title)} | Jurnal Penelitian Ilmu Pendidikan</title>`);
   html=html.replace(/<meta\b[^>]*>/gi,tag=>/name="(?:viewport|generator|gs_meta_revision)"|charset=/i.test(tag)?tag:'');
   const meta={citation_journal_title:'Jurnal Penelitian Ilmu Pendidikan',citation_journal_abbrev:'JPIP',citation_issn:'2541-5492',
-    citation_title:a.title,citation_language:'en',citation_date:a.year,citation_volume:a.volume,citation_issue:a.number,
+    citation_title:a.title,citation_language:'en',citation_date:a.publishedDate ?? a.year,citation_volume:a.volume,citation_issue:a.number,
     citation_firstpage:a.firstPage,citation_lastpage:a.lastPage,citation_doi:a.doi,citation_pdf_url:`../pdfs/${a.pdf}`,
     citation_keywords:a.keywords.join('; '),'DC.Title':a.title,'DC.Description':`${a.abstract}\nKeywords: ${a.keywords.join('; ')}`,
-    'DC.Language':'en','DC.Date.issued':a.year,'DC.Date.dateSubmitted':a.receivedDate,
+    'DC.Language':'en','DC.Date.issued':a.publishedDate ?? a.year,'DC.Date.dateSubmitted':a.receivedDate,
     'DC.Date.accepted':a.acceptedDate,'DC.Format':'application/pdf','DC.Identifier':a.id,
     'DC.Identifier.DOI':a.doi,'DC.Identifier.pageNumber':`${a.firstPage}–${a.lastPage}`,'DC.Source':'Jurnal Penelitian Ilmu Pendidikan',
     'DC.Source.ISSN':'2541-5492','DC.Source.Volume':a.volume,'DC.Source.Issue':a.number,
@@ -52,8 +52,9 @@ export async function renderLocalDetail(template, a) {
   html=html.replace(/<section class="item references">[\s\S]*?<\/section>/,()=>`<section class="item references"><h2 class="label">References</h2><div class="value">${a.references.map(text=>`<p>${referenceHtml(text)}</p>`).join('\n')}</div></section>`);
   const published=template.match(/<div class="item published">[\s\S]*?<\/section>\s*<\/div>/)?.[0];
   if(!published)throw Error('Published template missing');
-  // The PDFs supply a publication year, not a full publication date.
-  html=html.replace(/<div class="item published">[\s\S]*?<\/section>\s*<\/div>/,()=>published.replace(/<span>[\s\S]*?<\/span>/,`<span>${a.year}</span>`));
+  html=html.replace(/<div class="item published">[\s\S]*?<\/section>\s*<\/div>/,()=>published.replace(/<span>[\s\S]*?<\/span>/,`<span>${a.publishedDate ?? a.year}</span>`));
+  html=html.replace(/(<h2 class="label">Citation Check<\/h2>\s*<div class="value">)[\s\S]*?(<\/div>\s*<\/section>)/,
+    (_,start,end)=>`${start}<img class="citation-check-badge" src="../assets/citation-check.svg" alt="Citation Check" />${end}`);
   html=html.replace(/(<div id="citationOutput"[^>]*>)[\s\S]*?(?=\s*<div class="citation_formats">)/,()=>`<div id="citationOutput" role="region" aria-live="polite">${citations.apa}</div>\n`);
   html=html.replace(/<a\b[\s\S]*?<\/a>/g,tag=>{
     if(!tag.includes('data-load-citation'))return tag;
