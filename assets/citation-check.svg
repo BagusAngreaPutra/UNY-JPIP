@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" role="img" aria-label="Citation Check" style="display:block;margin:0 auto">
-<circle cx="35" cy="35" r="27" fill="#fff" stroke="#ddd" stroke-width="2"/>
-<path d="M19 31 32 14 46 20 55 36 42 54 24 49Z" fill="none" stroke="#008bc9" stroke-width="4"/>
-<path d="M32 14 48 11 57 25 46 42 42 54" fill="none" stroke="#e40046" stroke-width="4"/>
-<path d="M19 31 24 49 42 54 55 36" fill="none" stroke="#f5b400" stroke-width="4"/>
-<path d="M24 49 19 31 32 14" fill="none" stroke="#6dbb45" stroke-width="3"/>
-<path d="M32 14 46 20 55 36" fill="none" stroke="#6b3fa0" stroke-width="3"/>
-</svg>

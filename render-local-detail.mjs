@@ -54,7 +54,8 @@ export async function renderLocalDetail(template, a) {
   if(!published)throw Error('Published template missing');
   html=html.replace(/<div class="item published">[\s\S]*?<\/section>\s*<\/div>/,()=>published.replace(/<span>[\s\S]*?<\/span>/,`<span>${a.publishedDate ?? a.year}</span>`));
   html=html.replace(/(<h2 class="label">Citation Check<\/h2>\s*<div class="value">)[\s\S]*?(<\/div>\s*<\/section>)/,
-    (_,start,end)=>`${start}<img class="citation-check-badge" src="../assets/citation-check.svg" alt="Citation Check" />${end}`);
+    (_,start,end)=>`${start}<div class="__dimensions_badge_embed__ crossdim" data-doi="${esc(a.doi)}"></div>${end}`);
+  html=html.replace('</body>', '<script src="../assets/badge.dimensions.ai/badge.js" type="text/javascript"></script>\n</body>');
   html=html.replace(/(<div id="citationOutput"[^>]*>)[\s\S]*?(?=\s*<div class="citation_formats">)/,()=>`<div id="citationOutput" role="region" aria-live="polite">${citations.apa}</div>\n`);
   html=html.replace(/<a\b[\s\S]*?<\/a>/g,tag=>{
     if(!tag.includes('data-load-citation'))return tag;
